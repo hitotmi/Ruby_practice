@@ -28,14 +28,14 @@ puts chocolate_food.type
 puts chocolate_color.shade
 
 
-
+#入れ子の有無
 module Baseball
   class File
   end
 
   class Second
     def file_with_nesting
-      #入れ子ありのクラス定義でFileクラスを参照する
+      #入れ子ありのクラス定義でFileクラスを参照
       puts File
     end
   end
@@ -43,7 +43,7 @@ end
 
 class Baseball::Second
   def file_without_nesting
-    #入れ子なしのクラス定義でFileクラスを参照する
+    #入れ子なしのクラス定義でFileクラスを参照
     puts File
   end
 end
