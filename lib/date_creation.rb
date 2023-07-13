@@ -25,6 +25,22 @@ dates.each do |date|
 end
 
 
+#arrayパターン
+puts(
+  case [1, 2, 3]
+  in [_, _, 3]
+    'matched'
+  end
+)
+
+puts(
+  case [1, 2, 3]
+  #最初の要素1をマッチさせ、残りの部をrestに代入
+  in [1, *rest]
+    "rest=#{rest}"
+  end
+)
+
 # valueパターン
 country = 'Korea'
 
@@ -50,3 +66,11 @@ in 'italy'
 end
 #パターンマッチでは、いずれの条件もマッチしない場合エラーが発生する
 p greeting
+
+
+puts(
+  case [1, 2, 3]
+  in [_, _, 3]
+    'matched'
+  end
+)
