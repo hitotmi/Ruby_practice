@@ -1,4 +1,7 @@
+require 'debug'
+
 def fizz_buzz(n)
+  # binding.break
   if n % 15 ==  0
     'Fizz Buzz'
   elsif n % 3 ==  0
