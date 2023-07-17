@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # def greet
 #   puts 'おはよう'
 #   #ブロックに引数を渡し、戻り値を受け取る
@@ -6,7 +8,6 @@
 #   puts text
 #   puts 'こんばんは'
 # end
-
 
 # greet do |text|
 #   text * 2
@@ -19,7 +20,6 @@ def greet(&block)
   puts text
   puts 'こんばんは'
 end
-
 
 greet do |text|
   text * 2

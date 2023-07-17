@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 name = ENV['MY_NAME']
 email = ARGV[0]
 age = ARGV[1]

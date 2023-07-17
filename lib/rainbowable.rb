@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Rainbowable
   def rainbow
     to_s.each_char.map.with_index do |char, count|

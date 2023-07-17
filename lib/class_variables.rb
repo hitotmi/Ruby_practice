@@ -1,5 +1,7 @@
-##クラス変数
-##@@nameのように変数名の最初に@を2つけると、そのクラスとそのサブクラスのインスタンス間で値を共有できる。
+# frozen_string_literal: true
+
+# #クラス変数
+# #@@nameのように変数名の最初に@を2つけると、そのクラスとそのサブクラスのインスタンス間で値を共有できる。
 class Product
   @@name = 'Product'
 
@@ -28,14 +30,13 @@ class DVD < Product
   end
 end
 
-
-#DVDクラスを定義した時に@@nameがDVDに変更される
+# DVDクラスを定義した時に@@nameがDVDに変更される
 puts Product.name
 puts DVD.name
 
 Product.new('movie')
 puts Product.name
 
-#Product.newの時に@@nameがmovuieに変更される
+# Product.newの時に@@nameがmovuieに変更される
 puts Product.name
 puts DVD.name

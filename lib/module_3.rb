@@ -1,4 +1,6 @@
-#モジュールに他のモジュールをinclude
+# frozen_string_literal: true
+
+# モジュールに他のモジュールをinclude
 module Food
   def eat
     'おいしい!'
@@ -6,7 +8,7 @@ module Food
 end
 
 module Tabemono
-  #Foodモジュールをinclude
+  # Foodモジュールをinclude
   include Food
 
   def sushi
@@ -15,8 +17,8 @@ module Tabemono
 end
 
 class User
-  #Tabemonoモジュールをinclude
-  #TabemonoモジュールがincludeしているFoodモジュールのメソッドも呼び出せる
+  # Tabemonoモジュールをinclude
+  # TabemonoモジュールがincludeしているFoodモジュールのメソッドも呼び出せる
   include Tabemono
 end
 
@@ -25,9 +27,7 @@ user = User.new
 puts user.sushi
 puts user.eat
 
-
-
-#prependについて
+# prependについて
 module A
   def to_s
     "A #{super}"
@@ -42,9 +42,8 @@ class Product
   end
 end
 
-
 product = Product.new
 
-#prependはミックスインしたクラスよりも先にモジュールからメソッドを検索
+# prependはミックスインしたクラスよりも先にモジュールからメソッドを検索
 p product.to_s
 p Product.ancestors

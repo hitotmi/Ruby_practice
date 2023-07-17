@@ -1,4 +1,6 @@
-#モジュールを利用した名前空間
+# frozen_string_literal: true
+
+# モジュールを利用した名前空間
 module Food
   # Foodモジュールに属するChocolateクラス
   class Chocolate
@@ -27,24 +29,25 @@ chocolate_color = Color::Chocolate.new('Brown')
 puts chocolate_food.type
 puts chocolate_color.shade
 
-
-#入れ子の有無
+# 入れ子の有無
 module Baseball
   class File
   end
 
   class Second
     def file_with_nesting
-      #入れ子ありのクラス定義でFileクラスを参照
+      # 入れ子ありのクラス定義でFileクラスを参照
       puts File
     end
   end
 end
 
-class Baseball::Second
-  def file_without_nesting
-    #入れ子なしのクラス定義でFileクラスを参照
-    puts File
+module Baseball
+  class Second
+    def file_without_nesting
+      # 入れ子なしのクラス定義でFileクラスを参照
+      puts File
+    end
   end
 end
 

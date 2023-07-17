@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Log
   def log(action)
     puts "[ログ] #{action}"
@@ -5,8 +7,8 @@ module Log
 end
 
 class Vehicle
-  #Logモジュールのlogメソッドを追加。logメソッドを直接呼び出すことができる。
-  #モジュールをクラスにincludeして機能を追加することを「ミックスイン」という。
+  # Logモジュールのlogメソッドを追加。logメソッドを直接呼び出すことができる。
+  # モジュールをクラスにincludeして機能を追加することを「ミックスイン」という。
   include Log
 
   def drive

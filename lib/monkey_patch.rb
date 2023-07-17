@@ -1,6 +1,7 @@
-class User
+# frozen_string_literal: true
 
-  def initialize(name, email)
+class User
+  def initialize(name, _email)
     @name = name
   end
 
@@ -9,7 +10,7 @@ class User
   end
 end
 
-user = User.new("Alice", "alice@example.com")
+user = User.new('Alice', 'alice@example.com')
 puts user.hello
 
 # Userクラスに対するモンキーパッチを適用して、helloメソッドを上書き
